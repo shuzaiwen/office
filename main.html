@@ -1,0 +1,420 @@
+﻿<!doctype html>
+<html lang="en" class=" ">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>办公自助平台</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/lightbox.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="css/custom.min.css" rel="stylesheet">
+    <!-- <script src="js/pdf.js"></script>
+    <link rel="stylesheet" href="css/viewer.css" /> -->
+    <!-- <script src="js/compatibility.js"></script> -->
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <!-- <link rel="resource" type="application/l10n" href="locale/locale.properties" />
+    <script src="js/l10n.js"></script>
+    <script src="js/debugger.js"></script>
+    <script src="js/viewer.js"></script> -->
+    <script>
+    </script>
+    <style>
+    .li-style{padding:0 8px;font-size:18px;display:block}.video-area{position:relative}/*.video{position:absolute;left:0;right:0;top:0;bottom:0}*/.img{padding:50px;max-width:500px;display:"block"}.suojin{text-indent:2em}.pstyle{margin-left:2em;line-height:20px}.well{margin-bottom:0}ol li{margin-bottom:10px;margin-left:8px;line-height:20px}a.tel{color:#007aff}.nav>li>a:hover{text-shadow:rgba(0,0,0,.25) 0 -1px 0;background:linear-gradient(#334556,#2C4257),#2A3F54;box-shadow:rgba(0,0,0,.25) 0 1px 0,inset rgba(255,255,255,.16) 0 1px 0}.list-group-item:hover{cursor:pointer;background-color:rgba(192,192,192,0.15)}.circle{width:32px;height:32px;color:#fff;position:relative;left:-16px;top:-16px;line-height:32px;text-align:center;background-color:#adff2f;-ms-border-radius:50%;border-radius:50%;cursor:pointer}div.gray{background-color:#708090}ul li{list-style:none}.title-zd{text-align:center;font-size:24px;font-weight:700;margin:30px 0}#sidebar-menu::-webkit-scrollbar{display:none}.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{text-align: center; vertical-align: middle;}
+    </style>
+</head>
+
+<body class="nav-sm">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="clearfix"></div>
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu" style="overflow-x:visible;overflow-y:auto;-webkit-overflow-scrolling : touch;">
+                        <div class="menu_section active">
+                            <h3>General</h3>
+                            <ul class="nav side-menu" style="">
+                                <li class="active"><a id="openldjh"><!--<i class="fa fa-table"></i>--><img src="fonts/ldjh2.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>领导<br/>讲话</span><span class="fa fa-chevron-down"></span></a></li>
+                                <li class="father"><a id="home"><i class="fa fa-home"></i>主页<span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openygsc"><!--<i class="fa fa-table"></i>--><img src="fonts/ygsc.png" width="30px" style="margin-bottom:0px;margin-right:0px;"/><span>员工<br/>手册</span><span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openoa"><!--<i class="fa fa-edit"></i>--><img src="fonts/OA2.png" width="30px" style="margin-bottom:5px;margin-right:2px;"/>五平台<span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openptzc"><!--<i class="fa fa-table"></i>--><img src="fonts/xt.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>平台<br/>支持</span><span class="fa fa-chevron-down"></span></a></li>
+                                <!--<li class="father"><a id="openu9"><i class="fa fa-desktop"></i>U9<span class="fa fa-chevron-down"></span></a></li>-->
+                                <li class="father"><a id="openprint"><!--<i class="fa fa-table"></i>--><img src="fonts/dyj.png" width="30px" style="margin-bottom:5px;margin-right:2px;"/>打印机<span class="fa fa-chevron-down"></span></a></li>
+                                <li class="father"><a id="openfile"><!--<i class="fa fa-table"></i>--><img src="fonts/fwq.png" width="30px" style="margin-bottom:5px;margin-right:2px;"/>服务器<span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openzgs"><!--<i class="fa fa-table"></i>--><img src="fonts/syb.png" width="30px" style="margin-bottom:5px;margin-right:2px;"/>子公司<span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openbsc"><!--<i class="fa fa-table"></i>--><img src="fonts/bsc.png" width="30px" style="margin-bottom:5px;margin-right:2px;"/>办事处<span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openkp"><!--<i class="fa fa-table"></i>--><img src="fonts/kp.png" width="30px" style="margin-bottom:5px;margin-right:2px;"/>开票<span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openit"><!--<i class="fa fa-table"></i>--><img src="fonts/itzc.png" width="30px" style="margin-bottom:5px;margin-right:3px;"/>IT支持<span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openqywh"><!--<i class="fa fa-table"></i>--><img src="fonts/wh.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>企业<br/>文化</span><span class="fa fa-chevron-down"></span></a></li>
+                                
+                                <li><a id="18system"><!--<i class="fa fa-table"></i>--><img src="fonts/xt.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>廿五<br/>系统</span><span class="fa fa-chevron-down"></span></a></li>
+                                <li><a id="openqjh"><!--<i class="fa fa-table"></i>--><img src="fonts/qjh.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>群集会</span><span class="fa fa-chevron-down"></span></a></li>
+                                <li>
+                                    <a id="openzd"><img src="fonts/zd.png" width="30px" style="margin-bottom:0px;margin-right:3px;" />制度
+                                        <br/>汇编<span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a id="opentx"><img src="fonts/zd.png" width="30px" style="margin-bottom:0px;margin-right:3px;" />体系
+                                        <br/>汇编<span class="fa fa-chevron-down"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-footer hidden-small">
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings"> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> </a>
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="FullScreen"> <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> </a>
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Lock"> <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> </a>
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Logout"> <span class="glyphicon glyphicon-off" aria-hidden="true"></span> </a>
+                </div>
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+        <div class="right_col" role="main" style="overflow-x:visible;overflow-y:auto;/*-webkit-overflow-scrolling : touch;*/" id="main">
+            <!-- /page content -->
+            <!-- footer content -->
+            <!--<footer>
+      <div class="pull-right"> IT流程体系部 </div>
+      <div class="clearfix"></div>
+    </footer>-->
+            <!-- /footer content -->
+        </div>
+    </div>
+    <!-- /footer content -->
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/custom.min.js"></script>  -->
+    <script src="js/lightbox.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#main").css("height", $(window).height());
+        $("#sidebar-menu").css("height", $(window).height());
+
+        $(window).resize(function() {
+            $("#main").css("height", $(window).height());
+            $("#sidebar-menu").css("height", $(window).height());
+        })
+
+        var toggle = function() {
+            $(".list-group-item").click(function() {
+                    $(this).next(".well").toggle().siblings(".well").hide();
+                    $(this).find(".glyphicon-chevron-right").toggle();
+                    $(this).siblings().find(".glyphicon-chevron-right").show();
+                    $(this).find(".glyphicon-chevron-down").toggle();
+                    $(this).siblings().find(".glyphicon-chevron-down").hide();
+                    // var x = $(this).offset().top;
+                    // alert($(this).attr("top"));
+                    // $("#main").scrollTop($(this).attr("top"));
+                }) //点击item的效果；            
+        }
+
+
+        var openzd1zc = function() {
+            $("#openzd1-zc").click(function() {
+                $("#main").load("zd1-zc.html", function() {
+                    toggle();
+                    openzd2yy();
+                    openzd3rl();
+                    openzd4cw();
+                    openzd5zh();
+                    openzd6sj();
+                    openzd7tz();
+                });
+            });
+        }
+
+        var openzd2yy = function() {
+            $("#openzd2-yy").click(function() {
+                $("#main").load("zd2-yy.html", function() {
+                    toggle();
+                    openzd1zc();
+                    openzd2yy();
+                    openzd3rl();
+                    openzd4cw();
+                    openzd5zh();
+                    openzd6sj();
+                    openzd7tz();
+                });
+            });
+        }
+
+        var openzd3rl = function() {
+            $("#openzd3-rl").click(function() {
+                $("#main").load("zd3-rl.html", function() {
+                    toggle();
+                    openzd1zc();
+                    openzd2yy();
+                    openzd4cw();
+                    openzd5zh();
+                    openzd6sj();
+                    openzd7tz();
+                });
+            });
+        }
+
+        var openzd4cw = function() {
+            $("#openzd4-cw").click(function() {
+                $("#main").load("zd4-cw.html", function() {
+                    toggle();
+                    openzd1zc();
+                    openzd2yy();
+                    openzd3rl();
+                    openzd5zh();
+                    openzd6sj();
+                    openzd7tz();
+                });
+            });
+        }
+
+        var openzd5zh = function() {
+            $("#openzd5-zh").click(function() {
+                $("#main").load("zd5-zh.html", function() {
+                    toggle();
+                    openzd1zc();
+                    openzd2yy();
+                    openzd3rl();
+                    openzd4cw();
+                    openzd6sj();
+                    openzd7tz();
+                });
+            });
+        }
+
+        var openzd6sj = function() {
+            $("#openzd6-sj").click(function() {
+                $("#main").load("zd6-sj.html", function() {
+                    toggle();
+                    openzd1zc();
+                    openzd2yy();
+                    openzd3rl();
+                    openzd4cw();
+                    openzd5zh();
+                    openzd7tz();
+                });
+            });
+        }
+
+        var openzd7tz = function() {
+            $("#openzd7-tz").click(function() {
+                $("#main").load("zd7-tz.html", function() {
+                    toggle();
+                    openzd1zc();
+                    openzd2yy();
+                    openzd3rl();
+                    openzd4cw();
+                    openzd5zh();
+                    openzd6sj();
+                });
+            });
+        }
+
+
+        $("#main").load("ldjh.html", function() {
+            toggle();
+        });
+
+        $("#home").on("click", function() {
+            $("#main").load("gosuncn.html", function() {
+                toggle();
+                $(".btn").click(function() {
+                    var a = $(".btn")
+                    if ($(this).hasClass("btn-default")) {
+                        a.removeClass("btn-primary active");
+                        a.addClass("btn-default");
+                        $(this).addClass("btn-primary active")
+                    }
+                })
+                $("#jtbb").click(function() {
+                    $(".rztxt").hide();
+                    $("#jtbbtxt").show();
+                })
+                $("#tjzl").click(function() {
+                    $(".rztxt").hide();
+                    $("#tjzltxt").show();
+                })
+                $("#gmkj").click(function() {
+                    $(".rztxt").hide();
+                    $("#gmkjtxt").show();
+                })
+                $("#xmkj").click(function() {
+                    $(".rztxt").hide();
+                    $("#xmkjtxt").show();
+                })
+                $("#cldz").click(function() {
+                    $(".rztxt").hide();
+                    $("#cldztxt").show();
+                })
+            });
+        })
+
+        /*$("#opendd").on("click", function() {
+            $("#main").load("dingding.html", function() {
+                toggle();
+            });
+        })*/
+
+        $("#openoa").on("click", function() {
+            $("#main").load("oamain.html", function() {
+                toggle();
+                var a = document.body.clientWidth - 70;
+                var b = 1.3333333333;
+                var c = a / b;
+                console.log(a);
+                $(".video-area").css("width", a);
+                $(".video-area").css("height", c);
+                //alert("草泥马")
+            });
+        })
+
+        $("#openfile").on("click", function() {
+            $("#main").load("f.html", function() {
+                toggle();
+            });
+        })
+
+        $("#openprint").on("click", function() {
+            $("#main").load("print.html", function() {
+                toggle();
+            });
+        })
+
+        /*$("#openemail").on("click", function() {
+            $("#main").load("email.html", function() {
+                toggle();
+            });
+        })*/
+
+        $("#openzgs").on("click", function() {
+            $("#main").load("zgs.html", function() {
+                toggle();
+            });
+        })
+
+        $("#openkp").on("click", function() {
+            $("#main").load("kp.html", function() {
+                toggle();
+            });
+        })
+
+        $("#openbsc").on("click", function() {
+            $("#main").load("bsc.html", function() {
+                toggle();
+            });
+        })
+
+        $("#openit").on("click", function() {
+            $("#main").load("IT.html", function() {
+                toggle();
+            });
+        })
+
+        $("#openqywh").on("click", function() {
+            $("#main").load("qywh.html", function() {
+                toggle();
+            });
+        })
+
+        $("#18system").on("click", function() {
+            $("#main").load("18system.html", function() {
+                toggle();
+            });
+        })
+
+        $("#openqjh").on("click", function() {
+            $("#main").load("qjh.html", function() {
+                toggle();
+            });
+        })
+
+        $("#openzd").click(function() {
+            $("#main").load("zd.html", function() {
+                toggle();
+                openzd1zc();
+                openzd2yy();
+                openzd3rl();
+                openzd4cw();
+                openzd5zh();
+                openzd6sj();
+                openzd7tz();
+            });
+        });
+
+        $("#opentx").click(function() {
+            $("#main").load("tx-iso.html", function() {
+                
+            });
+        });
+
+        $("#openldjh").click(function() {
+            $("#main").load("ldjh.html",function() {
+                toggle();
+            });
+        });
+
+        $("#openptzc").click(function() {
+            $("#main").load("ptzc.html",function() {
+                toggle();
+            });
+        });
+
+        $("#openygsc").click(function() {
+            $("#main").load("ygsc.html",function() {
+            });
+        });
+    })
+    var CURRENT_URL = window.location.href.split("?")[0],
+        $BODY = $("body"),
+        $MENU_TOGGLE = $("#menu_toggle"),
+        $SIDEBAR_MENU = $("#sidebar-menu"),
+        $SIDEBAR_FOOTER = $(".sidebar-footer"),
+        $LEFT_COL = $(".left_col"),
+        $RIGHT_COL = $(".right_col"),
+        $NAV_MENU = $(".nav_menu"),
+        $FOOTER = $("footer");
+    $(document).ready(function() {
+        var e = function() {
+            $RIGHT_COL.css("min-height", $(window).height());
+            $SIDEBAR_MENU.css("min-height", $(window).height());
+            //var e = $BODY.outerHeight(),
+            //t = $BODY.hasClass("footer_fixed") ? 0 : $FOOTER.height(),
+            //n = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
+            //i = n > e ? n : e;
+            //i -= $NAV_MENU.height() + t, $RIGHT_COL.css("min-height", i)
+        };
+        $(window).resize(function() {
+            e(); //浏览器窗口大小变化时，调整大小；
+        });
+        $SIDEBAR_MENU.find("a").on("click", function(t) {
+            var n = $(this).parent();
+            n.is(".active") ? ( //n.removeClass("active active-sm"), 
+                $("ul:first", n).slideUp(function() {
+                    e()
+                })) : (n.parent().is(".child_menu") || ($SIDEBAR_MENU.find("li").removeClass("active active-sm"), $SIDEBAR_MENU.find("li ul").slideUp()), n.addClass("active"), $("ul:first", n).slideDown(function() {
+                e()
+            }))
+        }), $MENU_TOGGLE.on("click", function() {
+            $BODY.hasClass("nav-md") ? ($SIDEBAR_MENU.find("li.active ul").hide(), $SIDEBAR_MENU.find("li.active").addClass("active-sm").removeClass("active")) : ($SIDEBAR_MENU.find("li.active-sm ul").show(), $SIDEBAR_MENU.find("li.active-sm").addClass("active").removeClass("active-sm")), $BODY.toggleClass("nav-md nav-sm"), e()
+        }), $SIDEBAR_MENU.find('a[href="' + CURRENT_URL + '"]').parent("li").addClass("current-page"), $SIDEBAR_MENU.find("a").filter(function() {
+            return this.href == CURRENT_URL
+        }).parent("li").addClass("current-page").parents("ul").slideDown(function() {
+            e()
+        }).parent().addClass("active"), e(), $.fn.mCustomScrollbar && $(".menu_fixed").mCustomScrollbar({
+            autoHideScrollbar: !0,
+            theme: "minimal",
+            mouseWheel: {
+                preventDefault: !0
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>

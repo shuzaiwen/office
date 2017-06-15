@@ -1,0 +1,108 @@
+﻿<div class="btn-group btn-group-justified" style="margin-top:20px;margin-bottom:20px;">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" id="oamain">OA</button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" id="openu9">U9</button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary active">BI</button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" id="opendd">钉钉</button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" id="openemail">邮箱</button>
+  </div>
+</div>
+<div class="">
+        
+        <div class="clearfix"></div>
+        <div class="row">
+          <ul class="list-group">
+          <li class="list-group-item"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-
+
+right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>简介</div> </li>
+            <div class='well' style="display:none">
+              <p>BI，大名“数据决策分析平台”，英文名Business intelligence system，英译中为“商务智能系统”，简单地说，是一个报表展示平台。</p>
+                
+            </div>
+            
+            <li class="list-group-item"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-
+
+right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>账号登录</div> </li>
+            <div class='well' style="display:none">            
+              <p>账号密码：同步OA账号密码</p>
+              <p>咨询人员：张漫 </p>
+              <p>咨询分机：6131</p> 
+               
+            </div>
+              <li class="list-group-item" ><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>访问网址</div> </li>
+            <div class='well' style="display:none">           
+            <p>内网: http://192.168.0.220/bi/</p>
+            <p>外网: http://bi.gosuncn.com:808/bi/</p>
+            <p>浏览器：谷歌，搜狗，360极速浏览器</p>
+            </div>
+ 
+            <li class="list-group-item"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-
+
+right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>常见问题</div> </li>
+            <div class='well' style="display:none">
+              <p>浏览器问题：</p> 
+              <p>登录网址一片空白，检查使用的浏览器是不是谷歌chrome浏览器、搜狗或者360极速模式浏览器。</p>           
+               <hr/>      
+               <p>报表权限问题：</p>
+               <p>可以咨询张漫，申请相关权限。</p>                         
+            </div>
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+       var toggle = function() {
+            $(".list-group-item").click(function() {
+                    $(this).next(".well").toggle().siblings(".well").hide();
+                    $(this).find(".glyphicon-chevron-right").toggle();
+                    $(this).siblings().find(".glyphicon-chevron-right").show();
+                    $(this).find(".glyphicon-chevron-down").toggle();
+                    $(this).siblings().find(".glyphicon-chevron-down").hide();
+                    // var x = $(this).offset().top;
+                    // alert($(this).attr("top"));
+                    // $("#main").scrollTop($(this).attr("top"));
+                }) //点击item的效果；            
+        }
+        $("#openu9").click(function() {
+        $("#main").load("U9.html", function() {
+            toggle();
+            var a = document.body.clientWidth - 70;
+            var b = 1.3333333333;
+            var c = a / b;
+            console.log(a);
+            $(".video-area").css("width", a);
+            $(".video-area").css("height", c);
+        });
+    })
+
+    $("#oamain").click(function() {
+        $("#main").load("oamain.html", function() {
+            toggle();
+            var a = document.body.clientWidth - 70;
+            var b = 1.3333333333;
+            var c = a / b;
+            console.log(a);
+            $(".video-area").css("width", a);
+            $(".video-area").css("height", c);
+        });
+    })
+
+    $("#opendd").click(function() {
+        $("#main").load("dingding.html", function() {
+            toggle();
+        });
+    })
+
+    $("#openemail").click(function() {
+        $("#main").load("email.html", function() {
+            toggle();
+        });
+    })
+      </script>

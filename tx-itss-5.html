@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-primary" id="fhitss" style="margin-top: 10px;">返回</button>
+<div class="">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item tx" data-file="itss-5-1"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>1.GSB/T 143.01<br>运维服务内部审核控制程序</div></li>
+            <li class="list-group-item tx" data-file="itss-5-2"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>2.GSB/T 143.02<br>运维服务管理评审控制程序</div></li>
+            <li class="list-group-item tx" data-file="itss-5-3"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>3.GSB/T 300.01<br>运维质量管理制度</div></li>
+            <li class="list-group-item tx" data-file="itss-5-4"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>4.GSB/T 300.02<br>客户满意度调查管理制度</div></li>
+            <li class="list-group-item tx" data-file="itss-5-5"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>5.GSB/T 143.03<br>顾客投诉管理制度</div></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $("li.tx").click(function() {
+        var file = $(this).data('file')
+        $("#main").load("pdfhtml.html",function() {
+            $("#iframeID").attr('src','viewer.html?file=pdf/'+file+'.pdf');
+            $("#backname").val("tx-itss-5");
+            //$("#fhiso1").hide();
+        });
+    });
+    $("#fhitss").click(function() {
+        $("#main").load("tx-itss.html",function() {
+            
+        });
+    });
+</script>

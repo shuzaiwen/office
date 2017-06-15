@@ -1,0 +1,982 @@
+﻿<!doctype html>
+<html lang="en" class=" ">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>办公自助平台</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/lightbox.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="css/custom.min.css" rel="stylesheet">
+    <script src="js/fastclick.js"></script>
+    <script>
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+    </script>
+    <style>
+    * {
+        font-family: Helvetica, sans-serif;
+    }
+    
+    #outer {
+        margin: auto;
+        width: 200px
+    }
+    
+    #openimg {
+        max-width: 400px
+    }
+    
+    .li-style {
+        padding: 0 8px;
+        font-size: 18px;
+        display: block
+    }
+    
+    .video-area {
+        position: relative
+    }
+    
+    /*.video {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0
+    }*/
+    
+    .img {
+        padding: 10px 0;
+        width: 100%
+    }
+    
+    .suojin {
+        text-indent: 2em
+    }
+    
+    .pstyle {
+        margin-left: 2em;
+        line-height: 20px
+    }
+    
+    .well {
+        margin-bottom: 0
+    }
+    
+    ol li {
+        margin-bottom: 10px;
+        margin-left: 8px;
+        line-height: 20px
+    }
+    
+    a.tel {
+        color: #007aff
+    }
+    
+    ::-webkit-scrollbar {
+        display: none
+    }
+    
+    .list-group-item:hover {
+        cursor: pointer
+    }
+    
+    li {
+        list-style-type: none
+    }
+    
+    .title-zd {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 30px 0
+    }
+    </style>
+</head>
+
+<body class="nav-sm" style="background: #fff">
+    <div id="outer">
+        <img src="fonts/loading.gif" width="100%" id="openimg" style="position:absolute; margin: auto;left: 0;right: 0;top: 0;bottom: 0;" />
+    </div>
+    <div class="container body" id="ym" style="display: none;">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                </div>
+                <div class="clearfix"></div>
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu" style="overflow-x:visible;overflow-y:auto;-webkit-overflow-scrolling : touch;">
+                    <div class="menu_section active">
+                        <h3>General</h3>
+                        <ul class="nav side-menu" style="">
+                            <li class="active"><a id="openldjh"><!--<i class="fa fa-table"></i>--><img src="fonts/ldjh2.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>领导<br/>讲话</span><span class="fa fa-chevron-down"></span></a></li>
+                            <li class="father"><a id="home"><i class="fa fa-home"></i>主页<span class="fa fa-chevron-down"></span></a> </li>
+                            <li><a id="openygsc"><!--<i class="fa fa-table"></i>--><img src="fonts/ygsc.png" width="30px" style="margin-bottom:0px;margin-left:2px;"/><span>员工<br/>手册</span><span class="fa fa-chevron-down"></span></a></li>
+                            <li>
+                                <a id="openoa"><img src="fonts/OA2.png" width="30px" style="margin-bottom:5px;margin-right:2px;" />五平台<span class="fa fa-chevron-down"></span></a>
+                            </li>
+                            <li><a id="openptzc"><!--<i class="fa fa-table"></i>--><img src="fonts/xt.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>平台<br/>支持</span><span class="fa fa-chevron-down"></span></a></li>
+                            <li class="father">
+                                <a id="openprint"><img src="fonts/dyj.png" width="30px" style="margin-bottom:5px;margin-right:2px;" />打印机<span class="fa fa-chevron-down"></span></a>
+                            </li>
+                            <li class="father">
+                                <a id="openfile"><img src="fonts/fwq.png" width="30px" style="margin-bottom:5px;margin-right:2px;" />服务器<span class="fa fa-chevron-down"></span></a>
+                            </li>
+                            <li>
+                                <a id="openzgs"><img src="fonts/syb.png" width="30px" style="margin-bottom:5px;margin-right:2px;" />子公司<span class="fa fa-chevron-down"></span></a>
+                            </li>
+                            <li>
+                                <a id="openbsc">
+                                    <img src="fonts/bsc.png" width="30px" style="margin-bottom:5px;margin-right:2px;" />办事处<span class="fa fa-chevron-down"></span> </a>
+                            </li>
+                            <li>
+                                <a id="openkp">
+                                    <img src="fonts/kp.png" width="30px" style="margin-bottom:5px;margin-right:2px;" />开票<span class="fa fa-chevron-down"></span> </a>
+                            </li>
+                            <li>
+                                <a id="openit">
+                                    <img src="fonts/itzc.png" width="30px" style="margin-bottom:5px;margin-right:3px;" />IT支持<span class="fa fa-chevron-down"></span> </a>
+                            </li>
+                            <li>
+                                <a id="openqywh">
+                                    <img src="fonts/wh.png" width="30px" style="margin-bottom:0px;margin-right:3px;" /><span>企业<br/>
+                      文化</span><span class="fa fa-chevron-down"></span> </a>
+                            </li>
+                            <li>
+                                <a id="18system">
+                                    <img src="fonts/xt.png" width="30px" style="margin-bottom:0px;margin-right:3px;" /><span>廿五<br/>
+                      系统</span><span class="fa fa-chevron-down"></span> </a>
+                            </li>
+                            <li><a id="openqjh"><!--<i class="fa fa-table"></i>--><img src="fonts/qjh.png" width="30px" style="margin-bottom:0px;margin-right:3px;"/><span>群集会</span><span class="fa fa-chevron-down"></span></a></li>
+                            <li>
+                                <a id="openzd"><img src="fonts/zd.png" width="30px" style="margin-bottom:0px;margin-right:3px;" />制度
+                                    <br/>汇编<span class="fa fa-chevron-down"></span></a>
+                            </li>
+                            <li>
+                                <a id="opentx"><img src="fonts/zd.png" width="30px" style="margin-bottom:0px;margin-right:3px;" />体系
+                                    <br/>汇编<span class="fa fa-chevron-down"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--</div>-->
+                <!-- /sidebar menu -->
+                <!-- /menu footer buttons -->
+                <div class="sidebar-footer hidden-small">
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Settings"> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> </a>
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="FullScreen"> <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> </a>
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Lock"> <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> </a>
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Logout"> <span class="glyphicon glyphicon-off" aria-hidden="true"></span> </a>
+                </div>
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+        <!-- top navigation -->
+        <!-- /top navigation -->
+        <!-- page content -->
+        <div class="right_col" role="main" style="overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling : touch" id="main"></div>
+        <!-- /page content -->
+        <!-- footer content -->
+        <!--<footer>
+      <div class="pull-right"> IT流程体系部 </div>
+      <div class="clearfix"></div>
+    </footer>-->
+        <!-- /footer content -->
+    </div>
+    </div>
+    <!-- /footer content -->
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="https://g.alicdn.com/dingding/open-develop/0.8.4/dingtalk.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/custom.min2.js"></script> -->
+    <script src="js/lightbox.min.js"></script>
+    <!--<script src="js/jquery.waypoints.min.js"></script>-->
+    <script>
+    $(document).ready(function() {
+        $("#main").css("height", $(window).height());
+        $("#sidebar-menu").css("height", $(window).height());
+
+        $(window).resize(function() {
+            $("#main").css("height", $(window).height());
+            $("#sidebar-menu").css("height", $(window).height());
+        })
+        var agentId = null;
+        var corpId = null;
+        var timeStamp = null;
+        var nonceStr = null;
+        var signature = null;
+        $.ajax({
+            url: 'https://ding.gosuncn.com:444/getConfig?signUrl=' + encodeURIComponent(window.location.href),
+            type: "get",
+            async: false,
+            dataType: 'jsonp',
+            jsonp: "callback",
+            jsonpCallback: 'getConfig',
+            success: function(data) {
+
+                console.log(data);
+
+                agentId = data.agentid;
+                corpId = data.corpId;
+                timeStamp = data.timeStamp;
+                nonceStr = data.nonceStr;
+                signature = data.signature;
+
+                dd.config({
+                    agentId: agentId,
+                    corpId: corpId,
+                    timeStamp: timeStamp,
+                    nonceStr: nonceStr,
+                    signature: signature,
+                    jsApiList: ['runtime.permission.requestAuthCode', 'biz.contact.choose', 'ui.pullToRefresh.enable', 'ui.pullToRefresh.stop', 'ui.webViewBounce.disable']
+                });
+
+                dd.ready(function() {
+                        dd.ui.webViewBounce.disable();
+                        var showloading = function() {
+                            dd.device.notification.showPreloader({
+                                text: "加载中..", //loading显示的字符，空表示不显示文字
+                                showIcon: true, //是否显示icon，默认true
+                                onSuccess: function(result) {},
+                                onFail: function(err) {}
+                            })
+                        }
+                        var hideloading = function() {
+                            dd.device.notification.hidePreloader({
+                                onSuccess: function(result) {},
+                                onFail: function(err) {}
+                            })
+                        }
+                        var toggle = function() {
+                            $(".list-group-item").click(function() {
+                                $(this).next(".well").toggle().siblings(".well").hide();
+                                $(this).find(".glyphicon-chevron-right").toggle();
+                                $(this).siblings().find(".glyphicon-chevron-right").show();
+                                $(this).find(".glyphicon-chevron-down").toggle();
+                                $(this).siblings().find(".glyphicon-chevron-down").hide();
+                            })
+                        }
+                        var openoa = function() {
+                            $("#oamain").click(function() {
+                                showloading()
+                                $("#main").load("oamain.html", function(responseTxt, statusTxt, xhr) {
+                                    if (statusTxt == "success") {
+                                        hideloading();
+                                    }
+                                    toggle();
+                                    openu9();
+                                    openbi();
+                                    opendd();
+                                    openemail();
+                                    var a = document.body.clientWidth - 70;
+                                    var b = 1.3333333333;
+                                    var c = a / b;
+                                    console.log(a);
+                                    $(".video-area").css("width", a);
+                                    $(".video-area").css("height", c);
+                                });
+                            })
+                        }
+
+                        var openbi = function() {
+                            $("#openbi").click(function() {
+                                showloading();
+                                $("#main").load("BI.html", function(responseTxt, statusTxt, xhr) {
+                                    if (statusTxt == "success") {
+                                        hideloading();
+                                    }
+                                    toggle();
+                                    openu9();
+                                    openoa();
+                                    opendd();
+                                    openemail();
+                                    var a = document.body.clientWidth - 70;
+                                    var b = 1.3333333333;
+                                    var c = a / b;
+                                    console.log(a);
+                                    $(".video-area").css("width", a);
+                                    $(".video-area").css("height", c);
+                                });
+                            })
+                        }
+                        var openu9 = function() {
+                            $("#openu9").click(function() {
+                                showloading();
+                                $("#main").load("U9.html", function(responseTxt, statusTxt, xhr) {
+                                    if (statusTxt == "success") {
+                                        hideloading();
+                                    }
+                                    toggle();
+                                    openoa();
+                                    openbi();
+                                    opendd();
+                                    openemail();
+                                    var a = document.body.clientWidth - 70;
+                                    var b = 1.3333333333;
+                                    var c = a / b;
+                                    console.log(a);
+                                    $(".video-area").css("width", a);
+                                    $(".video-area").css("height", c);
+                                });
+                            })
+                        }
+
+                        var opendd = function() {
+                            $("#opendd").click(function() {
+                                $("#main").load("dingding.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openu9();
+                                    openoa();
+                                    openbi();
+                                    openemail();
+                                });
+                            })
+                        }
+
+                        var openemail = function() {
+                            $("#openemail").click(function() {
+                                $("#main").load("email.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openu9();
+                                    openoa();
+                                    openbi();
+                                    opendd();
+                                });
+                            })
+                        }
+
+                        var openzd1zc = function() {
+                            $("#openzd1-zc").click(function() {
+                                $("#main").load("zd1-zc.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openzd2yy();
+                                    openzd3rl();
+                                    openzd4cw();
+                                    openzd5zh();
+                                    openzd6sj();
+                                    openzd7tz();
+                                });
+                            });
+                        }
+
+                        var openzd2yy = function() {
+                            $("#openzd2-yy").click(function() {
+                                $("#main").load("zd2-yy.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openzd1zc();
+                                    openzd2yy();
+                                    openzd3rl();
+                                    openzd4cw();
+                                    openzd5zh();
+                                    openzd6sj();
+                                    openzd7tz();
+                                });
+                            });
+                        }
+
+                        var openzd3rl = function() {
+                            $("#openzd3-rl").click(function() {
+                                $("#main").load("zd3-rl.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openzd1zc();
+                                    openzd2yy();
+                                    openzd4cw();
+                                    openzd5zh();
+                                    openzd6sj();
+                                    openzd7tz();
+                                });
+                            });
+                        }
+
+                        var openzd4cw = function() {
+                            $("#openzd4-cw").click(function() {
+                                $("#main").load("zd4-cw.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openzd1zc();
+                                    openzd2yy();
+                                    openzd3rl();
+                                    openzd5zh();
+                                    openzd6sj();
+                                    openzd7tz();
+                                });
+                            });
+                        }
+
+                        var openzd5zh = function() {
+                            $("#openzd5-zh").click(function() {
+                                $("#main").load("zd5-zh.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openzd1zc();
+                                    openzd2yy();
+                                    openzd3rl();
+                                    openzd4cw();
+                                    openzd6sj();
+                                    openzd7tz();
+                                });
+                            });
+                        }
+
+                        var openzd6sj = function() {
+                            $("#openzd6-sj").click(function() {
+                                $("#main").load("zd6-sj.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openzd1zc();
+                                    openzd2yy();
+                                    openzd3rl();
+                                    openzd4cw();
+                                    openzd5zh();
+                                    openzd7tz();
+                                });
+                            });
+                        }
+
+                        var openzd7tz = function() {
+                            $("#openzd7-tz").click(function() {
+                                $("#main").load("zd7-tz.html", function(responseTxt, statusTxt, xhr) {
+                                    toggle();
+                                    openzd1zc();
+                                    openzd2yy();
+                                    openzd3rl();
+                                    openzd4cw();
+                                    openzd5zh();
+                                    openzd6sj();
+                                });
+                            });
+                        }
+
+                        // var opentxiso = function() {
+                        //     $("#opentxiso").click(function() {
+                        //         $("#main").load("tx-iso.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             opentxitss();
+                        //             openiso1();
+                        //             openiso2();
+                        //             openiso3();
+                        //             openiso4();
+                        //             openiso5();
+                        //             openiso6();
+                        //             openiso7();
+                        //             openiso8();
+                        //             openiso9();
+                        //             openiso10();
+                        //         });
+                        //     });
+                        // }
+
+                        // var opentxitss = function() {
+                        //     $("#opentxitss").click(function() {
+                        //         $("#main").load("tx-itss.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             opentxiso();
+                        //             openitss1();
+                        //             openitss2();
+                        //             openitss3();
+                        //             openitss4();
+                        //             openitss5();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso1 = function() {
+                        //     $("#openiso1").click(function() {
+                        //         $("#main").load("tx-iso-1.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso2 = function() {
+                        //     $("#openiso2").click(function() {
+                        //         $("#main").load("tx-iso-2.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso3 = function() {
+                        //     $("#openiso3").click(function() {
+                        //         $("#main").load("tx-iso-3.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+
+                        // var openiso4 = function() {
+                        //     $("#openiso4").click(function() {
+                        //         $("#main").load("tx-iso-4.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso5 = function() {
+                        //     $("#openiso5").click(function() {
+                        //         $("#main").load("tx-iso-5.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso6 = function() {
+                        //     $("#openiso6").click(function() {
+                        //         $("#main").load("tx-iso-6.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso7 = function() {
+                        //     $("#openiso7").click(function() {
+                        //         $("#main").load("tx-iso-7.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso8 = function() {
+                        //     $("#openiso8").click(function() {
+                        //         $("#main").load("tx-iso-8.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso9 = function() {
+                        //     $("#openiso9").click(function() {
+                        //         $("#main").load("tx-iso-9.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openiso10 = function() {
+                        //     $("#openiso10").click(function() {
+                        //         $("#main").load("tx-iso-10.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhiso();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openitss1 = function() {
+                        //     $("#openitss1").click(function() {
+                        //         $("#main").load("tx-itss-1.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhitss();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openitss2 = function() {
+                        //     $("#openitss2").click(function() {
+                        //         $("#main").load("tx-itss-2.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhitss();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openitss3 = function() {
+                        //     $("#openitss3").click(function() {
+                        //         $("#main").load("tx-itss-3.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhitss();
+                        //         });
+                        //     });
+                        // }
+
+
+                        // var openitss4 = function() {
+                        //     $("#openitss4").click(function() {
+                        //         $("#main").load("tx-itss-4.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhitss();
+                        //         });
+                        //     });
+                        // }
+
+                        // var openitss5 = function() {
+                        //     $("#openitss5").click(function() {
+                        //         $("#main").load("tx-itss-5.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             fhitss();
+                        //         });
+                        //     });
+                        // }
+
+                        // var fhiso = function() {
+                        //     $("#fhiso").click(function() {
+                        //         $("#main").load("tx-iso.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             opentxitss();
+                        //             openiso1();
+                        //             openiso2();
+                        //             openiso3();
+                        //             openiso4();
+                        //             openiso5();
+                        //             openiso6();
+                        //             openiso7();
+                        //             openiso8();
+                        //             openiso9();
+                        //             openiso10();
+                        //         })
+                        //     });
+                        // }
+
+                        // var fhitss = function() {
+                        //     $("#fhitss").click(function() {
+                        //         $("#main").load("tx-itss.html", function(responseTxt, statusTxt, xhr) {
+                        //             toggle();
+                        //             opentxiso();
+                        //             openitss1();
+                        //             openitss2();
+                        //             openitss3();
+                        //             openitss4();
+                        //             openitss5();
+                        //         })
+                        //     });
+                        // }
+
+
+                        $("#home").click(function() {
+                            $("#main").load("gosuncn.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                                $(".btn").click(function() {
+                                    var a = $(".btn")
+                                    if ($(this).hasClass("btn-default")) {
+                                        a.removeClass("btn-primary active");
+                                        a.addClass("btn-default");
+                                        $(this).addClass("btn-primary active")
+                                    }
+                                })
+                                $("#jtbb").click(function() {
+                                    $(".rztxt").hide();
+                                    $("#jtbbtxt").show();
+                                })
+                                $("#tjzl").click(function() {
+                                    $(".rztxt").hide();
+                                    $("#tjzltxt").show();
+                                })
+                                $("#gmkj").click(function() {
+                                    $(".rztxt").hide();
+                                    $("#gmkjtxt").show();
+                                })
+                                $("#xmkj").click(function() {
+                                    $(".rztxt").hide();
+                                    $("#xmkjtxt").show();
+                                })
+                                $("#cldz").click(function() {
+                                    $(".rztxt").hide();
+                                    $("#cldztxt").show();
+                                })
+                            });
+                        })
+
+                        $("#opendd").click(function() {
+                            showloading();
+                            $("#main").load("dingding.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openoa").click(function() {
+                            showloading();
+                            $("#main").load("oamain.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                                openu9();
+                                openbi();
+                                opendd();
+                                openemail();
+                                var a = document.body.clientWidth - 70;
+                                var b = 1.3333333333;
+                                var c = a / b;
+                                console.log(a);
+                                $(".video-area").css("width", a);
+                                $(".video-area").css("height", c);
+                                //alert("草泥马")
+                            });
+                        })
+
+                        $("#openfile").click(function() {
+                            showloading();
+                            $("#main").load("f.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openprint").click(function() {
+                            showloading();
+                            $("#main").load("print.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openemail").click(function() {
+                            showloading();
+                            $("#main").load("email.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openzgs").click(function() {
+                            showloading();
+                            $("#main").load("zgs.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openkp").click(function() {
+                            showloading();
+                            $("#main").load("kp.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openbsc").click(function() {
+                            showloading();
+                            $("#main").load("bsc.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openit").click(function() {
+                            showloading();
+                            $("#main").load("IT.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openqywh").click(function() {
+                            showloading();
+                            $("#main").load("qywh.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#18system").click(function() {
+                            showloading();
+                            $("#main").load("18system.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        })
+
+                        $("#openqjh").click(function() {
+                            showloading();
+                            $("#main").load("qjh.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                            });
+                        });
+
+                        $("#openzd").click(function() {
+                            showloading();
+                            $("#main").load("zd.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                                toggle();
+                                openzd1zc();
+                                openzd2yy();
+                                openzd3rl();
+                                openzd4cw();
+                                openzd5zh();
+                                openzd6sj();
+                                openzd7tz();
+                            });
+                        });
+
+                        $("#opentx").click(function() {
+                            $("#main").load("tx-iso.html", function(responseTxt, statusTxt, xhr) {
+                                $.getScript("js/tx.js", function() {
+                                    opentxitss();
+                                    openiso1();
+                                    openiso2();
+                                    openiso3();
+                                    openiso4();
+                                    openiso5();
+                                    openiso6();
+                                    openiso7();
+                                    openiso8();
+                                    openiso9();
+                                    openiso10();
+                                })
+                                toggle();
+                            });
+                        });
+
+                        $("#openldjh").click(function() {
+                            $("#main").load("ldjh.html", function(responseTxt, statusTxt, xhr) {
+                                toggle();
+                            });
+                        });
+
+                        $("#openptzc").click(function() {
+                            $("#main").load("ptzc.html", function(responseTxt, statusTxt, xhr) {
+                                toggle();
+                            });
+                        });
+
+                        $("#main").load("ldjh.html", function(responseTxt, statusTxt, xhr) {
+                            if (statusTxt == "success") {
+                                hideloading();
+                            }
+                            toggle();
+                        });
+
+                        $("#openygsc").click(function() {
+                            $("#main").load("ygsc.html", function(responseTxt, statusTxt, xhr) {
+                                if (statusTxt == "success") {
+                                    hideloading();
+                                }
+                            });
+                        });
+
+                        setTimeout(function() { //定时器 
+                            $("#outer").css("display", "none"); //将图片的display属性设置为none
+                            $("#ym").css("display", "block");
+                            $("body").css("background", "#2A3F54");
+                        }, 500); //设置1千毫秒即1秒
+
+                    }) //ready
+
+                dd.error(function(err) {
+                    //alert('dd error: ' + JSON.stringify(err.errorCode));
+
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        url: 'https://ding.gosuncn.com:444/error',
+                        dataType: 'jsonp',
+                        jsonp: "callback",
+                        jsonpCallback: 'getConfig',
+                        complete: function(data) {
+                            location.reload();
+                        }
+                    })
+
+                });
+
+            }
+
+        })
+    })
+
+    function countChecked() {
+        "all" === checkState && $(".bulk_action input[name='table_records']").iCheck("check"), "none" === checkState && $(".bulk_action input[name='table_records']").iCheck("uncheck");
+        var e = $(".bulk_action input[name='table_records']:checked").length;
+        e ? ($(".column-title").hide(), $(".bulk-actions").show(), $(".action-cnt").html(e + " Records Selected")) : ($(".column-title").show(), $(".bulk-actions").hide())
+    }
+
+
+
+    var CURRENT_URL = window.location.href.split("?")[0],
+        $BODY = $("body"),
+        $MENU_TOGGLE = $("#menu_toggle"),
+        $SIDEBAR_MENU = $("#sidebar-menu"),
+        $SIDEBAR_FOOTER = $(".sidebar-footer"),
+        $LEFT_COL = $(".left_col"),
+        $RIGHT_COL = $(".right_col"),
+        $NAV_MENU = $(".nav_menu"),
+        $FOOTER = $("footer");
+    $(document).ready(function() {
+        var e = function() {
+            $RIGHT_COL.css("min-height", $(window).height());
+            $SIDEBAR_MENU.css("min-height", $(window).height());
+            //var e = $BODY.outerHeight(),
+            //t = $BODY.hasClass("footer_fixed") ? 0 : $FOOTER.height(),
+            //n = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
+            //i = n > e ? n : e;
+            //i -= $NAV_MENU.height() + t, $RIGHT_COL.css("min-height", i)
+        };
+        $(window).resize(function() {
+            e(); //浏览器窗口大小变化时，调整大小；
+        });
+        $SIDEBAR_MENU.find("a").on("click", function(t) {
+            var n = $(this).parent();
+            n.is(".active") ? ( //n.removeClass("active active-sm"), 
+                $("ul:first", n).slideUp(function() {
+                    e()
+                })) : (n.parent().is(".child_menu") || ($SIDEBAR_MENU.find("li").removeClass("active active-sm"), $SIDEBAR_MENU.find("li ul").slideUp()), n.addClass("active"), $("ul:first", n).slideDown(function() {
+                e()
+            }))
+        }), $MENU_TOGGLE.on("click", function() {
+            $BODY.hasClass("nav-md") ? ($SIDEBAR_MENU.find("li.active ul").hide(), $SIDEBAR_MENU.find("li.active").addClass("active-sm").removeClass("active")) : ($SIDEBAR_MENU.find("li.active-sm ul").show(), $SIDEBAR_MENU.find("li.active-sm").addClass("active").removeClass("active-sm")), $BODY.toggleClass("nav-md nav-sm"), e()
+        }), $SIDEBAR_MENU.find('a[href="' + CURRENT_URL + '"]').parent("li").addClass("current-page"), $SIDEBAR_MENU.find("a").filter(function() {
+            return this.href == CURRENT_URL
+        }).parent("li").addClass("current-page").parents("ul").slideDown(function() {
+            e()
+        }).parent().addClass("active"), $(window).smartresize(function() {
+            e()
+        }), e(), $.fn.mCustomScrollbar && $(".menu_fixed").mCustomScrollbar({
+            autoHideScrollbar: !0,
+            theme: "minimal",
+            mouseWheel: {
+                preventDefault: !0
+            }
+        })
+    })
+
+    /*})    */
+    </script>
+</body>
+
+</html>

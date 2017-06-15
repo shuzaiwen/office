@@ -1,0 +1,136 @@
+﻿<div class="btn-group btn-group-justified" style="margin-top:20px;margin-bottom:20px;">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="oamain">OA</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary active">U9</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="openbi">BI</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="opendd">钉钉</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="openemail">邮箱</button>
+    </div>
+</div>
+<div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>账号申请</div>
+            </li>
+            <div class='well' style="display:none">
+                <p>申请流程： 登录OA—管理服务类流程—办公管理类流程—S-O-015A1 IT服务支持申请流程—U9账号与权限开放。</p>
+                <p>密码修改：强密码要求，包含字母、数字及符号，字母最好含大小写,字符长度不得少于八位数。</p>
+                <p>忘记密码：员工忘记U9登录密码，可以联系IT流程体系部。</p>
+                <p>相关咨询人员：张漫、 刘玉莲、黎启垣、张祥华</p>
+                <p>咨询分机号：6134、6162</p>
+            </div>
+            <li class="list-group-item">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>访问网址</div>
+            </li>
+            <div class='well' style="display:none">
+                <p> 内网：http://192.168.0.11/u9</p>
+                <p>电信外网：http://183.62.9.181:90/u9</p>
+                <p> 联通外网：http://210.21.52.90:90/u9</p>
+                <p> 内网-生产/委外：http://192.168.0.205/u9</p>
+                <p>电信外网-生产/委外：http://183.62.9.185:90/u9</p>
+                <p>联通外网-生产/委外：http://210.21.52.85:90/u9</p>
+            </div>
+            <li class="list-group-item">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>常见问题</div>
+            </li>
+            <div class='well' style="display:none">
+                <p>密码问题：</p>
+                <p> 1.如果连续输错密码3次被锁住，3分钟后账号会重新启用。若用户记得密码不用重置，3分钟后重新登录即可，如忘记密码可以联系IT流程体系部同事重置密码；</p>
+                <p>2.一般3个月要求更换密码。</p>
+                <p>浏览器设置问题：</p>
+                <p>1.兼容性设置</p>
+                <p>2.信任站点添加</p>
+                <p>3.自定义级别中，启用文件下载安全设置</p>
+                <p>（详细步骤可以查看视频教学）</p>
+            </div>
+            <li class="list-group-item">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>视频教学</div>
+            </li>
+            <div class='well' style="display:none">
+                <p>U9登录</p>
+                <div class="video-area">
+                    <video class="video" src="video/1.U9dr.mp4" preload="none" controls style="width:80%;"></video>
+                </div>
+                <p>U9日常操作</p>
+                <div class="video-area">
+                    <video class="video" src="video/2.U9rccz.mp4" preload="none" controls style="width:80%;"></video>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+var toggle = function() {
+    $(".list-group-item").click(function() {
+            $(this).next(".well").toggle().siblings(".well").hide();
+            $(this).find(".glyphicon-chevron-right").toggle();
+            $(this).siblings().find(".glyphicon-chevron-right").show();
+            $(this).find(".glyphicon-chevron-down").toggle();
+            $(this).siblings().find(".glyphicon-chevron-down").hide();
+            // var x = $(this).offset().top;
+            // alert($(this).attr("top"));
+            // $("#main").scrollTop($(this).attr("top"));
+        }) //点击item的效果；            
+}
+$("#oamain").click(function() {
+    $("#main").load("oamain.html", function() {
+        toggle();
+        openu9();
+        openbi();
+        opendd();
+        openemail();
+        var a = document.body.clientWidth - 70;
+        var b = 1.3333333333;
+        var c = a / b;
+        console.log(a);
+        $(".video-area").css("width", a);
+        $(".video-area").css("height", c);
+    });
+})
+
+$("#openbi").click(function() {
+    $("#main").load("BI.html", function() {
+        toggle();
+        openu9();
+        openoa();
+        opendd();
+        openemail();
+        var a = document.body.clientWidth - 70;
+        var b = 1.3333333333;
+        var c = a / b;
+        console.log(a);
+        $(".video-area").css("width", a);
+        $(".video-area").css("height", c);
+    });
+})
+
+$("#opendd").click(function() {
+    $("#main").load("dingding.html", function() {
+        toggle();
+        openu9();
+        openoa();
+        openbi();
+        openemail();
+    });
+})
+
+$("#openemail").click(function() {
+    $("#main").load("email.html", function() {
+        toggle();
+        openu9();
+        openoa();
+        openbi();
+        opendd();
+    });
+})
+</script>

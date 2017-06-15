@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-primary" id="fhiso" style="margin-top: 10px;">返回</button>
+<div class="">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item tx" data-file="iso-7-1"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>1.GSB/I 218.03-2016<br>会议纪要控制作业指导书</div></li>
+            <li class="list-group-item tx" data-file="iso-7-2"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>2.GSB/I 300.01-2016<br>质量信息反馈处理程序</div></li>
+            <li class="list-group-item tx" data-file="iso-7-3"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>3.GSB/I 305.01-2016<br>监视和测量设备管理规定</div></li>
+            <li class="list-group-item tx" data-file="iso-7-4"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>4.GSB/I 305.03-2016<br>计量仪器检验作业指导书</div></li>
+            <li class="list-group-item tx" data-file="iso-7-5"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>5.GSB/I 306.701-2016<br>流程管理规定</div></li>
+            <li class="list-group-item tx" data-file="iso-7-6"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>6.GSB/I 318.09-2016<br>文件管理操作标准规范</div></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $("li.tx").click(function() {
+        var file = $(this).data('file')
+        $("#main").load("pdfhtml.html",function() {
+            $("#iframeID").attr('src','viewer.html?file=pdf/'+file+'.pdf');
+            $("#backname").val("tx-iso-7");
+            //$("#fhiso1").hide();
+        });
+    });
+    $("#fhiso").click(function() {
+        $("#main").load("tx-iso.html",function() {
+            
+        });
+    });
+</script>

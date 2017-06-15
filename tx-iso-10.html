@@ -1,0 +1,30 @@
+<button type="button" class="btn btn-primary" id="fhiso" style="margin-top: 10px;">返回</button>
+<div class="">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item tx" id="openiso10_1"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>1.GSB/A 303.01-2015<br>能源资源管理规定</div></li>
+            <li class="list-group-item tx" id="openiso10_2"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>2.GSB/A 307.01-2015<br>废弃物管理规定</div></li>
+            <li class="list-group-item tx" id="openiso10_3"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>3.GSB/A 307.02-2015<br>水污染防治管理规定</div></li>
+            <li class="list-group-item tx" id="openiso10_4"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>4.GSB/A 307.03-2015<br>空气污染防治管理规定</div></li>
+            <li class="list-group-item tx" id="openiso10_5"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>5.GSB/A 307.04-2015<br>噪音污染防治管理规定</div></li>
+            <li class="list-group-item tx" id="openiso10_6"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>6.GSB/A 307.05-2015<br>新建项目环境影响管理规定</div></li>
+            <li class="list-group-item tx" id="openiso10_7"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>7.GSB/A 513.04-2015<br>消防安全管理规定</div></li>
+            <li class="list-group-item tx" id="openiso10_8"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>8. 2016.12.12<br>高新兴-事故应急预案</div></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $("li.tx").click(function() {
+        var file = $(this).data('file')
+        $("#main").load("pdfhtml.html",function() {
+            $("#iframeID").attr('src','viewer.html?file=pdf/'+file+'.pdf');
+            $("#backname").val("tx-iso-10");
+            //$("#fhiso1").hide();
+        });
+    });
+    $("#fhiso").click(function() {
+        $("#main").load("tx-iso.html",function() {
+            
+        });
+    });
+</script>

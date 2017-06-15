@@ -1,0 +1,43 @@
+<div class="btn-group btn-group-justified" style="margin-top:20px;margin-bottom:20px;">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="opentxiso">ISO体系汇编</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary active">ITSS体系汇编</button>
+    </div>
+</div>
+<div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item tx" data-module="tx-itss-1">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>服务目录</div>
+            </li>
+            <li class="list-group-item tx"  data-module="tx-itss-2">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>组织结构与职责</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-itss-3">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>支持程序</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-itss-4">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>过程控制程序</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-itss-5">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>评价和改进程序</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $("li.tx").click(function() {
+        var module = $(this).data("module");
+        $("#main").load(module+'.html',function() {
+            
+        });
+    });
+    $("#opentxiso").click(function() {
+        $("#main").load('tx-iso.html',function() {
+            
+        });
+    });
+</script>

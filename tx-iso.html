@@ -1,0 +1,58 @@
+<div class="btn-group btn-group-justified" style="margin-top:20px;margin-bottom:20px;">
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary active">ISO体系汇编</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="opentxitss">ITSS体系汇编</button>
+    </div>
+</div>
+<div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item tx" data-module="tx-iso-1">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>手册和程序</div>
+            </li>
+            <li class="list-group-item tx"  data-module="tx-iso-2">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>制造中心（IT控）</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-3">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>研发中心</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-4">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>通信事业部</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-5">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>平安事业部</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-6">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>采购中心</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-7">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>IT流程体系部</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-8">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>人力资源与干部管理部</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-9">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>品牌部</div>
+            </li>
+            <li class="list-group-item tx" data-module="tx-iso-10">
+                <div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"></span>行政服务中心</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $("li.tx").click(function() {
+        var module = $(this).data("module");
+        $("#main").load(module+'.html',function() {
+            
+        });
+    });
+    $("#opentxitss").click(function() {
+        $("#main").load('tx-itss.html',function() {
+            
+        });
+    });
+</script>

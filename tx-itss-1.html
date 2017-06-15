@@ -1,0 +1,23 @@
+<button type="button" class="btn btn-primary" id="fhitss" style="margin-top: 10px;">返回</button>
+<div class="">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item tx" data-file="itss-1-1"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>1.GSB/T 316.15<br>服务目录管理办法</div></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $("li.tx").click(function() {
+        var file = $(this).data('file')
+        $("#main").load("pdfhtml.html",function() {
+            $("#iframeID").attr('src','viewer.html?file=pdf/'+file+'.pdf');
+            $("#backname").val("tx-itss-1");
+            //$("#fhiso1").hide();
+        });
+    });
+    $("#fhitss").click(function() {
+        $("#main").load("tx-itss.html",function() {
+            
+        });
+    });
+</script>

@@ -1,0 +1,36 @@
+<button type="button" class="btn btn-primary" id="fhitss" style="margin-top: 10px;">返回</button>
+<div class="">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item tx" data-file="itss-4-1"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>1.GSB/T 316.06<br>服务级别管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-2"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>2.GSB/T 316.07<br>服务报告管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-3"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>3.GSB/T 316.08<br>事件管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-4"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>4.GSB/T 316.09<br>问题管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-5"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>5.GSB/T 316.10<br>配置管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-6"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>6.GSB/T 316.12<br>发布管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-7"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>7.GSB/T 306.01<br>信息安全管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-8"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>8.GSB/T 306.02<br>信息安全管理制度</div></li>
+            <li class="list-group-item tx" data-file="itss-4-9"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>9.GSB/T 316.11<br>变更管理过程</div></li>
+            <li class="list-group-item tx" data-file="itss-4-10"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>10.GSB/T 316.18<br>变更管理评估和审核机制</div></li>
+            <li class="list-group-item tx" data-file="itss-4-11"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>11.GSB/T 316.19<br>变更管理体系</div></li>
+            <li class="list-group-item tx" data-file="itss-4-12"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>12.GSB/T 316.20<br>发布管理评估和审核机制</div></li>
+            <li class="list-group-item tx" data-file="itss-4-13"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>13.GSB/T 316.16<br>应急响应管理制度</div></li>
+            <li class="list-group-item tx" data-file="itss-4-14"><div class="li-style"><span class="glyphicon glyphicon-chevron-right pull-right"></span><span class="glyphicon glyphicon-chevron-down pull-right" style="display:none;"> </span>14.GSB/T 316.14<br>运维项目应急处理管理办法</div></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $("li.tx").click(function() {
+        var file = $(this).data('file')
+        $("#main").load("pdfhtml.html",function() {
+            $("#iframeID").attr('src','viewer.html?file=pdf/'+file+'.pdf');
+            $("#backname").val("tx-itss-4");
+            //$("#fhiso1").hide();
+        });
+    });
+    $("#fhitss").click(function() {
+        $("#main").load("tx-itss.html",function() {
+            
+        });
+    });
+</script>
